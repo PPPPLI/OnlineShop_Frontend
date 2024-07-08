@@ -1,0 +1,43 @@
+<div id="main">
+    <div id="logoBox">
+        <img ngSrc="../assets/logo.png" alt="Logo" height="80" width="90" priority class="logo">
+        <span class="logo" id="title">Grocery Shop</span>
+    </div>
+    <div id="childOne">
+        <a routerLink="/" class="link navText">Home</a>
+        <a *ngIf="account.logined && account.isManager"  class="link navText" (click)="openConfig()">Add product</a>
+        <a *ngIf="account.logined && account.isManager"  class="link navText" routerLink="/manage">User manage</a>
+    </div>
+    <div id="childTwo">
+
+        <input *ngIf="doSearch && account.logined" [formControl]="searchBar" id="searchBar" placeholder="Search...">
+        <img *ngIf="account.logined" id="searchImg" src="../assets/searchIcon.png" alt="search" width="25px" height="25px" (click)="getSearch()">
+
+        <button *ngIf="!account.logined else unLogin" class="loginConfig navText"  routerLink="register">Registry</button>
+        <ng-template  #unLogin>
+                <div id="accountBox">
+                    <span class="loginConfig navText" id="nickName" (click)="getAccount()">{{account.nickName}}</span>
+                    <img  src="../assets/account.png" alt="search" width="35px" height="35px" id="nameImg">
+                </div>
+        </ng-template>
+        <button *ngIf="!account.logined" class="loginConfig navText" routerLink="login">Login</button>
+        <div *ngIf="account.logined && !account.isManager" id="cartBox"><img routerLink="cart" [src]="account.isEmpty? '../assets/cart1.png':'../assets/cart_2.png'" class="loginConfig navText" width="28px" height="28px" id="cart">
+        <span id="articlNum">{{articleNum}}</span></div>
+        <div id="scrollBox">
+            <div class="accountDetail">
+                <img  src="../assets/profil.png" alt="search" width="25px" height="25px">
+                <span class="accountText">Profil page</span>
+            </div>
+            <div class="accountDetail">
+                <img  src="../assets/switchAccount.png" alt="search" width="25px" height="25px">
+                <span class="accountText">Switch account</span>
+            </div>
+            <div class="accountDetail"  (click)="removeData()">
+                <img  src="../assets/logout.png" alt="search" width="25px" height="25px">
+                <span class="accountText">Log out</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+

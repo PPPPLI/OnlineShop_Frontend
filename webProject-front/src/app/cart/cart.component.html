@@ -1,0 +1,41 @@
+<div id="cartBox">
+    <div id="secondBox">
+        <div id="title"><b>MY CART</b></div>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let el of cart; index as i">
+                    <td *ngIf="i != 0"><img [src]="el.imgUrl! | urlTransform" width="100"></td>
+                    <td *ngIf="i != 0">{{el.name | titlecase}}</td>
+                    <td *ngIf="i != 0">{{el.category!.toString()| titlecase}}</td>
+                    <td *ngIf="i != 0">{{el.quantity}}</td>
+                    <td *ngIf="i != 0">{{el.price | discountPricePipe:el.rating| currency:'$'}}</td>
+                    <td *ngIf="i != 0">{{el.price * el.quantity | discountPricePipe:el.rating | currency:'$'}}</td>
+                    <td *ngIf="i != 0"><img src="../../assets/remove.png" width="30" class="removeIcon" (click)="remove(el.name,i)"></td>
+                </tr>
+            </tbody>
+            <tfoot *ngIf="cart.length > 1" id="foot">
+                <tr>
+                    <td colspan="3" id="total">Total</td>
+                    <td>{{cart[0].quantity}}</td>
+                    <td>{{cart[0].price | currency:'$'}}</td>
+                    <td>{{cart[0].rating | currency:'$'}}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div>
+        <button (click)="removeCart(0)"  *ngIf="cart.length > 1">Cancel Order</button>
+        <button (click)="removeCart(1)"  *ngIf="cart.length > 1">Buy</button>
+    </div>
+</div>

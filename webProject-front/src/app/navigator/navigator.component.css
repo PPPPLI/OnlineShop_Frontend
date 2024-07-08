@@ -1,0 +1,213 @@
+#main{
+    width: 100%;
+    min-width: 1500px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(198, 191, 191);
+}
+
+
+.loginConfig{
+
+    
+    font-size: larger;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+#cart{
+
+    cursor: pointer;
+}
+
+#nickName{
+
+    letter-spacing: 3px;
+    font-size: x-large;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button{
+
+    background-color: darkseagreen;
+    color: white;
+    transition: 1s;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+button:hover{
+
+    background-color: white;
+    color: darkseagreen;
+}
+
+.link{
+
+    text-decoration: none;
+
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 25px;
+    margin-left: 50px;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.link:link, .link:visited{
+
+    color: inherit;
+
+}
+
+.link:hover{
+
+    color: red;
+}
+
+#logoBox{
+
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: 30%;
+    padding-bottom: 10px;
+}
+
+.logo{
+
+    margin-left: 40px;
+}
+
+#title{
+
+    font-weight: 600;
+    font-size: xx-large;
+    margin-left: 30px;
+    margin-top: 15px;
+    color: rgb(46, 138, 61);
+    cursor: default;
+
+}
+
+.navText{
+
+    margin-top: 20px;
+}
+
+#childOne{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    width: 50%;
+
+}
+
+#childTwo{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    width: 40%;
+}
+
+#searchBar{
+
+    margin-right: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 22px;
+}
+
+
+#searchImg{
+    margin-right: 50px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+#accountInfo{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: nowrap;
+}
+
+#accountBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 35px;
+    transition: 0.5s;
+}
+
+#accountBox:hover{
+
+    color: red;
+}
+
+#nameImg{
+
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#scrollBox{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: absolute;
+    left: auto;
+    margin-right: 120px;
+    margin-top: 70px;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.accountDetail{
+
+    padding: 2px 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.accountDetail:hover{
+
+    background-color: rgb(206, 200, 200);
+}
+
+.accountText{
+
+    margin-left: 10px;
+}
+
+#articlNum{
+    width: 25px;
+    margin-top: 25px;
+    margin-right: 10px;
+    font-size: large;
+    font-weight: bold;
+}
+
+#cartBox{
+
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}

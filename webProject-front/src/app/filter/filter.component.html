@@ -1,0 +1,14 @@
+<div id="filterBox">
+    <select [(ngModel)]="selectedCategory" (change)="filter('category')" id="categorySelec">
+        <option disabled>-- Category --</option>
+        <option *ngFor="let el of categories; index as i" [value]="el">{{el | titlecase}}</option>
+    </select>
+    <select [(ngModel)]="selectedDiscount" (change)="filter('discount')"  id="discountSelec">
+        <option disabled>-- Discount --</option>
+        <option *ngFor="let el of discounts" [value]="el">{{el | discountTrans}}</option>
+    </select>
+    <select [(ngModel)]="selectedRate" (change)="filter('rate')"  id="rateSelec">
+        <option disabled>-- Rate --</option>
+        <option *ngFor="let el of rates" [value]="el">{{el | rateTransPipe}}</option>
+    </select>
+</div>

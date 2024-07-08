@@ -1,0 +1,16 @@
+#wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin-top: 20px;
+}
+
+.product{
+
+    width: 22%;
+    min-width: 320px;
+    height: 100%;
+    margin: 20px calc(17% / 3);
+}
+

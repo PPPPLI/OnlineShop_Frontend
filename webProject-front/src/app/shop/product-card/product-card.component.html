@@ -1,0 +1,30 @@
+<div class="card" >
+    <div class="header block">
+        <span id="discount">{{(product.discount != 100? product.discount:'') | discountPipe}}</span>
+        <div id="rating">
+            <div *ngFor="let element of rate index as i">
+                <img src="../../assets/rating.png" alt="star"  width="20px">
+            </div>
+            <div id="ratingPoint">{{product.rating}}/5</div>
+        </div>
+    </div>
+    <img *ngIf="product.imgUrl" [src]="product.imgUrl! | urlTransform" alt="product"  height="250" class="block" id="shoesPic">
+    <div class="block" id="shoesName">{{product.name}}</div>
+    <div id="prices">
+        <div class="block" id="shoesPrice">{{product.price | currency:'$'}}</div>
+        <div id="discountPrice" *ngIf="product.discount != 100">{{product.price | discountPricePipe:product.discount | currency:'$'}}</div>
+    </div>
+
+    <div class="block" id="addBox">
+        <div id="articleAddBox" *ngIf="!account.isManager">
+            <button class="ajustNum" (click)="inc()">+</button>
+            <input  [formControl]="quantity" id="quantity"><span>/{{product.quantity}}</span>
+            <button class="ajustNum" id="subBtn" (click)="dec()">-</button>
+        </div>
+        <button (click)="add()" *ngIf="!account.isManager else manager">ADD TO CART</button>
+        <ng-template #manager>
+            <button class="adminBtn" (click)="openConfig()">MODIFY ARTICLE</button>
+            <button class="adminBtn" (click)="remove()">REMOVE ARTICLE</button>
+        </ng-template>
+    </div>
+</div>

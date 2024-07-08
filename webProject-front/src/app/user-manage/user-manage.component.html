@@ -1,0 +1,24 @@
+<div id="cartBox">
+    <div id="secondBox">
+        <div id="title"><b>USER LIST</b></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>USER NAME</th>
+                    <th>ROLE</th>
+                    <th>ACTIVED</th>
+                    <th>PERMIT|BAN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let el of user; index as i">
+                    <td>{{el.username | titlecase}}</td>
+                    <td>{{el.role}}</td>
+                    <td>{{el.accountNonLocked?"√":"x"}}</td>
+                    <td *ngIf="el.accountNonLocked && i != 0"><img src="../../assets/user_unblock.jpg" width="30" class="removeIcon" (click)="block(el.username)"></td>
+                    <td *ngIf="!el.accountNonLocked  && i != 0"><img src="../../assets/user_block.jpg" width="23" class="removeIcon" (click)="unblock(el.username)"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

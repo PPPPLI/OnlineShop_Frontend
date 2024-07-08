@@ -1,0 +1,154 @@
+.card{
+    padding: 10px;
+    margin: 10px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+
+.header{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block{
+
+    margin-bottom: 5px;
+}
+
+#discount{
+    font-size: large;
+    color: red;
+    font-weight: bold;
+}
+
+#rating{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#ratingPoint{
+    margin-left: 15px;
+    font-weight: bold;
+    color: rgb(137, 137, 137);
+}
+
+#shoesPic{
+
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+#shoesName{
+
+    font-weight: 600;
+    font-size: x-large;
+    transition: 0.2s;
+}
+
+#shoesName:hover{
+
+    color: red;
+    cursor: pointer;
+}
+
+#prices{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: large;
+}
+
+#shoesPrice{
+
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+#discountPrice{
+    
+    font-weight: 600;
+    color: red;
+}
+
+button{
+
+    border: 2px gray solid;
+    border-radius: 5px;
+    font-size: medium;
+    padding: 7px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: 1s;
+}
+
+button:hover{
+
+    color: white;
+    background-color: darkseagreen;
+}
+
+#addBox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#quantity{
+
+    width: 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.ajustNum{
+    height: 21px;
+    display: inline-block;
+    line-height: 0;
+    border: 1px solid grey;
+}
+
+#articleAddBox{
+
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#subBtn{
+
+    margin-left: 5px;
+}
+
+.adminBtn{
+
+    
+    border: 2px gray solid;
+    border-radius: 5px;
+    font-size: small;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: 1s;
+}
+

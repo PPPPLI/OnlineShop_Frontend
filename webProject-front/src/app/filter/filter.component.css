@@ -1,0 +1,16 @@
+#filterBox{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+select{
+
+    margin: 30px 1% 30px 1%;
+    font-size: large;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+

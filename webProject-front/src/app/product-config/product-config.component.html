@@ -1,0 +1,28 @@
+<div  id="productConf" (click)="closeConfig()"></div>
+<div id="formBox">
+
+    <div id="titleBox">
+        <span id="title">Product Editor</span>
+        <span *ngIf="warning" id="warning">{{warningMsg}}</span>
+    </div>
+     
+    <div class="formEle" id="name"><label>Name</label><input type="text" [(ngModel)]="product.name" (focus)="closeWarning()" ></div>
+    <div class="formEle"><label>Price</label><input type="text" [(ngModel)]="product.price"  (focus)="closeWarning()" ></div>
+    <div class="formEle">
+        <label>Category</label>
+        <select [(ngModel)]="product.category"  (focus)="closeWarning()" >
+            <option disabled></option>
+            <option *ngFor="let ele of categories; index as i" [value]="ele | categoryPipe">{{ele | categoryPipe | titlecase}}</option>
+        </select>
+    </div>
+    <div class="formEle"><label>Quantity</label><input type="number" min="0"  [(ngModel)]="product.quantity"  (focus)="closeWarning()" ></div>
+    <div class="formEle"><label>Discount|(Full Price:100)</label><input type="number" min="0" max="100"  [(ngModel)]="product.discount"  (focus)="closeWarning()" ></div>
+
+    <div class="formEle">
+        <input type="file" encrytype="" name="img" id="fileInput" (change)="updateVal()" [(ngModel)]="picture"  (focus)="closeWarning()">
+    </div>
+    <div id="btnBox">
+        <button (click)="closeConfig()">Cancel</button>
+        <button (click)="sendData()">Submit</button>
+    </div>
+</div>

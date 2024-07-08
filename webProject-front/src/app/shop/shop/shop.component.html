@@ -1,0 +1,8 @@
+<app-filter (eventEmitter)="getFilter($event)"></app-filter>
+<div id="wrapper">
+    <div *ngFor="let product of filteredProducts index as id"  class="product">
+      <app-product-card [product]="product" (emitHandler)="addToCart($event)"></app-product-card>
+    </div>
+</div>
+<app-product-config [hidden]="!doConfig"></app-product-config>
+
